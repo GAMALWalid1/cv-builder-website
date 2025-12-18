@@ -48,7 +48,7 @@ export function SkillsForm({ data, onChange }: SkillsFormProps) {
           <div className="flex gap-2">
             <Input
               id="skill-input"
-              placeholder="e.g., JavaScript, Project Management, Communication"
+              placeholder=", JavaScript, Project Management, Communication"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               onKeyPress={handleKeyPress}
@@ -63,7 +63,7 @@ export function SkillsForm({ data, onChange }: SkillsFormProps) {
         {data.length > 0 && (
           <div>
             <Label>Your Skills ({data.length})</Label>
-            <div className="flex flex-wrap gap-2 mt-2 p-4 bg-muted/50 rounded-lg min-h-[100px]">
+            <div className="flex flex-wrap gap-2 mt-2 p-4 bg-muted/50 rounded-lg min-h-25">
               {data.map((skill) => (
                 <Badge key={skill} variant="secondary" className="pl-3 pr-1 py-1.5 text-sm">
                   {skill}
